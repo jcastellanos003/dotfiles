@@ -58,3 +58,9 @@ if [ -f '/Users/juliancastellanos/exec -l /bin/bash/google-cloud-sdk/path.bash.i
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/juliancastellanos/exec -l /bin/bash/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/juliancastellanos/exec -l /bin/bash/google-cloud-sdk/completion.bash.inc'; fi
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion || {
+    # if not found in /usr/local/etc, try the brew --prefix location
+    [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] && \
+        . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+}
