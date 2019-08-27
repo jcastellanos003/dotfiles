@@ -1,5 +1,5 @@
 alias ap="cd /Users/juliancastellanos/Documents/apps"
-alias vital="cd /Users/juliancastellanos/Documents/apps/uruit/vitalngx-app"
+alias vital="cd /Users/juliancastellanos/Documents/apps/uruit/vitalngx-app && nvm use vital"
 alias gp="git pull"
 alias gu="git push"
 alias gall="git add ."
