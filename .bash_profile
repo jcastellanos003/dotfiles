@@ -1,7 +1,17 @@
 alias ap="cd /Users/juliancastellanos/Documents/apps"
+alias vital="cd /Users/juliancastellanos/Documents/apps/uruit/vitalngx-app"
+alias gp="git pull"
+alias gu="git push"
+alias gall="git add ."
+alias gc="git commit -m"
+alias gcb="git checkout -b"
+alias go="git checkout"
+alias god="git checkout develop"
+alias gom="git checkout master"
+alias gob="git checkout build"
 alias gs="git status"
 alias cz="git cz"
-alias lala="cd /Users/juliancastellanos/Documents/apps/draw_devs"
+alias wee="cd /Users/juliancastellanos/Documents/apps/draw_devs"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
