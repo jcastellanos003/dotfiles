@@ -13,14 +13,15 @@ alias gs="git status"
 alias cz="git cz"
 alias wee="cd /Users/juliancastellanos/Documents/apps/draw_devs"
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+export JAVA_HOME=$(/usr/libexec/java_home) # java home
 
 # get current branch in git repo
 function parse_git_branch() {
-    BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-    if [ ! "${BRANCH}" == "" ]
-    then
-        STAT=`parse_git_dirty`
+    BRANCH=$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+    if [ ! "${BRANCH}" == "" ]; then
+        STAT=$(parse_git_dirty)
         echo "[${BRANCH}${STAT}]"
     else
         echo ""
@@ -28,14 +29,32 @@ function parse_git_branch() {
 }
 
 # get current status of git repo
-function parse_git_dirty {
-    status=`git status 2>&1 | tee`
-    dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
-    untracked=`echo -n "${status}" 2> /dev/null | grep "Untracked files" &> /dev/null; echo "$?"`
-    ahead=`echo -n "${status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?"`
-    newfile=`echo -n "${status}" 2> /dev/null | grep "new file:" &> /dev/null; echo "$?"`
-    renamed=`echo -n "${status}" 2> /dev/null | grep "renamed:" &> /dev/null; echo "$?"`
-    deleted=`echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?"`
+function parse_git_dirty() {
+    status=$(git status 2>&1 | tee)
+    dirty=$(
+        echo -n "${status}" 2>/dev/null | grep "modified:" &>/dev/null
+        echo "$?"
+    )
+    untracked=$(
+        echo -n "${status}" 2>/dev/null | grep "Untracked files" &>/dev/null
+        echo "$?"
+    )
+    ahead=$(
+        echo -n "${status}" 2>/dev/null | grep "Your branch is ahead of" &>/dev/null
+        echo "$?"
+    )
+    newfile=$(
+        echo -n "${status}" 2>/dev/null | grep "new file:" &>/dev/null
+        echo "$?"
+    )
+    renamed=$(
+        echo -n "${status}" 2>/dev/null | grep "renamed:" &>/dev/null
+        echo "$?"
+    )
+    deleted=$(
+        echo -n "${status}" 2>/dev/null | grep "deleted:" &>/dev/null
+        echo "$?"
+    )
     bits=''
     if [ "${renamed}" == "0" ]; then
         bits=">${bits}"
@@ -71,6 +90,6 @@ if [ -f '/Users/juliancastellanos/exec -l /bin/bash/google-cloud-sdk/completion.
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion || {
     # if not found in /usr/local/etc, try the brew --prefix location
-    [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] && \
+    [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] &&
         . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 }
