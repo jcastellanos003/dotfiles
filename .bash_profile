@@ -1,4 +1,7 @@
 alias ap="cd /Users/juliancastellanos/Documents/apps"
+alias lalapp="cd /Users/juliancastellanos/Documents/apps/draw_devs/lalapp"
+alias parking="cd /Users/juliancastellanos/Documents/apps/draw_devs/parking"
+alias yiwu="cd /Users/juliancastellanos/Documents/apps/draw_devs/yiwu"
 alias vital="cd /Users/juliancastellanos/Documents/apps/uruit/vitalngx-app && nvm use vital && code ."
 alias gp="git pull"
 alias gu="git push"
@@ -13,9 +16,9 @@ alias gs="git status"
 alias cz="git cz"
 alias wee="cd /Users/juliancastellanos/Documents/apps/draw_devs"
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export JAVA_HOME=$(/usr/libexec/java_home) # java home
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8) # java home
 
 # get current branch in git repo
 function parse_git_branch() {
