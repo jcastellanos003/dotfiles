@@ -16,7 +16,8 @@ alias gob="git checkout build"
 alias gs="git status"
 alias cz="git cz"
 alias wee="cd /Users/juliancastellanos/Documents/apps/draw_devs"
-alias cl="clear"
+alias c="clear"
+alias ns="npm start"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
