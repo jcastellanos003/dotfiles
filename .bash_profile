@@ -1,5 +1,7 @@
 alias ap="cd /Users/juliancastellanos/Documents/apps"
 alias lalapp="cd /Users/juliancastellanos/Documents/apps/draw_devs/lalapp"
+alias fundadores="cd /Users/juliancastellanos/Documents/apps/draw_devs/fundadores"
+alias victorino="cd /Users/juliancastellanos/Documents/apps/draw_devs/victorino"
 alias parking="cd /Users/juliancastellanos/Documents/apps/draw_devs/parking"
 alias yiwu="cd /Users/juliancastellanos/Documents/apps/draw_devs/yiwu"
 alias battery="cd /Users/juliancastellanos/Documents/apps/draw_devs/battery"
@@ -21,7 +23,7 @@ alias ns="npm start"
 alias nb="npm run build"
 alias nd="npm run dev"
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8) # java home
 
