@@ -2,10 +2,13 @@ alias ap="cd /Users/juliancastellanos/Documents/apps"
 alias lalapp="cd /Users/juliancastellanos/Documents/apps/draw_devs/lalapp"
 alias fundadores="cd /Users/juliancastellanos/Documents/apps/draw_devs/fundadores"
 alias victorino="cd /Users/juliancastellanos/Documents/apps/draw_devs/victorino"
+alias paisa="cd /Users/juliancastellanos/Documents/apps/draw_devs/paisa"
 alias parking="cd /Users/juliancastellanos/Documents/apps/draw_devs/parking"
 alias yiwu="cd /Users/juliancastellanos/Documents/apps/draw_devs/yiwu"
 alias battery="cd /Users/juliancastellanos/Documents/apps/draw_devs/battery"
-alias vital="cd /Users/juliancastellanos/Documents/apps/uruit/vitalngx-app && nvm use vital && code ."
+alias elves="cd /Users/juliancastellanos/Documents/apps/uruit/elves"
+alias tila="cd /Users/juliancastellanos/Documents/apps/draw_devs/tila"
+alias money="cd /Users/juliancastellanos/Documents/apps/draw_devs/moneypath"
 alias gp="git pull"
 alias gu="git push"
 alias gall="git add ."
@@ -17,6 +20,7 @@ alias gcm="git checkout master"
 alias gcb="git checkout build"
 alias gs="git status"
 alias cz="git cz"
+alias pg="flutter pub get"
 alias wee="cd /Users/juliancastellanos/Documents/apps/draw_devs"
 alias c="clear"
 alias ns="npm start"
@@ -25,7 +29,16 @@ alias nd="npm run dev"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+# $PATH /Users/juliancastellanos/google-cloud-sdk/bin:/Users/juliancastellanos/.nvm/versions/node/v12.13.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8) # java home
+export ANDROID_HOME="~/Library/Android/sdk"
+export ANDROID_SDK_ROOT="~/Library/Android/sdk"
+export PATH="$PATH:$HOME/flutter/bin"                    # flutter home
+export PATH="$PATH:~/Library/Android/sdk/platform-tools" # android tools
+export PATH="$PATH:~/Library/Android/sdk/tools"          # android tools
+
+# export ANDROID_HOME="~/Library/Android/sdk/build-tools/28.0.3"
 
 # get current branch in git repo
 function parse_git_branch() {
