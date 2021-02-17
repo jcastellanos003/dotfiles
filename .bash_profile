@@ -37,6 +37,8 @@ export ANDROID_SDK_ROOT="~/Library/Android/sdk"
 export PATH="$PATH:$HOME/flutter/bin"                    # flutter home
 export PATH="$PATH:~/Library/Android/sdk/platform-tools" # android tools
 export PATH="$PATH:~/Library/Android/sdk/tools"          # android tools
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/tools/bin"
 
 # export ANDROID_HOME="~/Library/Android/sdk/build-tools/28.0.3"
 
